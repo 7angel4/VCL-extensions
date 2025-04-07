@@ -1,0 +1,6 @@
+data/.DS_Store
+data/MNIST/.DS_Store
+results/.DS_Store
+results/permuted/.DS_Store
+.DS_Store
+*.DS_Store
