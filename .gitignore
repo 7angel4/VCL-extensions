@@ -4,3 +4,4 @@ results/.DS_Store
 results/permuted/.DS_Store
 .DS_Store
 *.DS_Store
+*.pyc

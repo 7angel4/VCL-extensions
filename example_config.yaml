@@ -1,0 +1,20 @@
+# Model Setup
+dataset_type: split             # 'split' or 'permuted'
+task_type: classification       # 'classification' or 'regression'
+prior_type: exponential         # 'gaussian' or 'exponential'
+
+# Prior Initialization
+init_prior_mu: 0.0              # Initial mean for the prior
+init_prior_scale: 0.1           # Initial scale (std) for the prior
+init_const: -3.0                # Constant for weight initialization
+
+# Coreset Parameters
+coreset_alg_name: kcenter       # Options: 'kcenter', 'random', or None
+coreset_size: 200               # Number of coreset points per task
+
+# Training Hyperparameters - you can try changing these as well
+# num_epochs: 100                 # Max training epochs
+# batch_size: 256                 # Batch size for training
+# learning_rate: 0.001            # Optimizer learning rate
+# patience: 5                     # Early stopping patience
+# early_stop_threshold: 1e-4      # Threshold for early stopping
