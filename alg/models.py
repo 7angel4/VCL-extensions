@@ -130,7 +130,6 @@ class VCLNN(BaseNN):
             layer.update_prior()
     
     def _kl_loss(self, task_id):
-        """Compute KL loss for current task"""
         kl_loss = 0.0
         for layer in self.hidden_layers:
             kl_loss += layer.kl_loss()

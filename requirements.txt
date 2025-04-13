@@ -1,8 +1,8 @@
 torch>=1.10.0
-scikit-learn
-pyyaml
-matplotlib
+torchvision
 numpy
 scipy
+scikit-learn
+matplotlib
+pyyaml
 h5py
-torchvision

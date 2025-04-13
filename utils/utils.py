@@ -127,7 +127,7 @@ def plot_mean_results(config, results, results_std=None, export=True, mname_filt
         if mean_results_std is not None:
             mean_results_std = {m: res for m, res in mean_results_std.items() if mname_filter(m)}
     return plot_results(config, mean_results, results_std=mean_results_std, export=export, 
-                        title=f"mean_{config.eval_metric}", legend=legend, loc=loc, 
+                        title=f"Mean {config.eval_metric.capitalize()}", legend=legend, loc=loc, 
                         bbox_to_anchor=bbox_to_anchor, figsize=figsize)
 
 def plot_final_results(config, results, results_std=None, export=True, mname_filter=None, legend=True,
@@ -139,7 +139,7 @@ def plot_final_results(config, results, results_std=None, export=True, mname_fil
         if final_results_std is not None:
             final_results_std = {m: res for m, res in final_results_std.items() if mname_filter(m)}
     return plot_results(config, final_results, results_std=final_results_std, export=export, 
-                        title=f"final_{config.eval_metric}", legend=legend, loc=loc, 
+                        title=f"Final {config.eval_metric.capitalize()}", legend=legend, loc=loc, 
                         bbox_to_anchor=bbox_to_anchor, figsize=figsize)
 
 def print_if(msg, print_progress):
