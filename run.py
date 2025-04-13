@@ -1,5 +1,6 @@
 import argparse
 from experiments import *
+from constants import *
 from config import ExperimentConfig
 from utils.config_loader import load_config
 
@@ -88,6 +89,8 @@ def main():
     # if args.command == "run-all":
     #     configs = get_all_configs(args.task_type)
 
+    torch.manual_seed(77)
+    np.random.seed(77)
     if args.command == "run-custom":
         configs = [load_experiment_config(path) for path in args.configs]
 

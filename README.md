@@ -3,11 +3,15 @@
 **Candidate number: 1088143**
 
 
-This project implements two methodological extensions to the **Variational Continual Learning (VCL)** (*Nguyen et al. (2017)*) framework: 
+This project implements two methodological extensions to the **Variational Continual Learning (VCL)** ([*Nguyen et al. (2017)*](https://arxiv.org/pdf/1710.10628)) framework: 
 1) Adapting VCL to **regression** tasks, and 
 2) Using an **exponential prior** as opposed to the standard Gaussian prior.
 
 This repository includes our implementations of the extended VCL framework, a reproduction of the SplitMNIST experiments (in jupyter notebooks) using this extended version, as well as a Python CLI for users to run those VCL experiments.
+
+## Code attribution
+Our implementation is partially adapted from the original authors' VCL implementation, which is available at: https://github.com/nvcuong/variational-continual-learning/. In particular, we reproduced their coreset selection algorithms to ensure faithful replication of their experimental setup. The remainder, however, is mostly based on our own understanding of their presented work in [*Nguyen et al. (2017)*](https://arxiv.org/pdf/1710.10628).
+
 
 ## Installation
 
