@@ -33,13 +33,24 @@ The CLI supports three subcommands:
 1. **run-custom**: Runs experiments using user-specified YAML configuration files.
 2. **run-default**: Runs the default experiment involving 3 models: `Vanilla` (non-variational baseline with no coreset), `GaussianVCL` (with  standard Gaussian prior) and `ExpVCL` (with exponential prior). The last two uses K-center coresets of size 200.
 
-### Example Usage
+### Example Commands:
 
-```bash
-python run.py run-custom --configs ./config1.yaml ./config2.yaml --task_type classification --results_type final --plot
-```
+1. **Run with user-provided YAML files:**
+   ```bash
+   python run.py run-custom --configs ./example_config.yaml --task_type regression --results_type final
+   ```
 
-This command will run experiments using the specified YAML configurations (`config1.yaml` and `config2.yaml`), performing a classification task, reporting final test results, and plotting those results.
+   This command will run experiments using the specified YAML configurations (`./example_config.yaml`), performing a regression task, reporting final test results, and
+   plotting those results.
+
+
+3. **Run default experiment:**
+   ```bash
+   python run.py run-default --task_type classification --results_type both
+   ```
+
+   This command will run the default classification experiment, reporting both final and lifetime test results, without plotting those results.
+   
 
 ## CLI Arguments
 
@@ -63,18 +74,6 @@ This command will run experiments using the specified YAML configurations (`conf
 - `--filter <filter_string>`: Substring filter for model names during reporting and plotting (i.e., can suppress display of models you don't want to see).
 
 - `--configs <config_file1> <config_file2> ...`: List of paths to YAML configuration files (for `run-custom` only).
-
-### Example Commands:
-
-1. **Run with user-provided YAML files:**
-   ```bash
-   python run.py run-custom --configs ./example_config.yaml --task_type regression --results_type final
-   ```
-
-2. **Run default experiment:**
-   ```bash
-   python run.py run-default --task_type classification --results_type both
-   ```
 
 ## Repository Structure
 
